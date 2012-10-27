@@ -105,10 +105,12 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #     Load in any scripts from linked dotfiles      #
 #####################################################
 #####################################################
-export DOTFILES_HOME=$HOME/.dotfiles
+export DOTFILES_HOME=$HOME/Code/dotfiles
 
 # source every .bash file in this rep
-for config_file ($DOTFILES_HOME/**/*.bash) source $config_file
+for config_file in `find $DOTFILES_HOME -name '*.bash'`; do
+  source $config_file
+done
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -118,4 +120,6 @@ then
 fi
 
 # load every completion after autocomplete loads
-for config_file ($DOTFILE_HOME/**/completion.bash) source $config_file
+for config_file in `find $DOTFILES_HOME -name 'completion.bash'`; do
+  source $config_file
+done

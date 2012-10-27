@@ -59,7 +59,9 @@ colorscheme darkmate
 " Change autocomplete PINK background
 highlight Pmenu ctermbg=238 gui=bold
 
-" Setup ignore patterns for CommandT
+" Setup mappings for CtrlP
+let g:ctrlp_map = '<Leader>t'
+" Setup ignore patterns for CtrlP
 set wildignore+=*.o,*.obj,.git,doc/**,*.sql,*.log
 
 " Add NERDTree open by default and move to edit window
