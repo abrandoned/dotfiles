@@ -2,19 +2,11 @@
 #
 # You probably want to change the [user] section here since you are not me.
 
-[hub]
-        protocol = https
 [user]
-        name = Zach Holman
-        email = zach@zachholman.com
-[credential]
-        helper = osxkeychain
+        name = Brandon Dewitt
+        email = brandonsdewitt@gmail.com
 [alias]
         co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
-        count   = !git shortlog -sn
 [color]
         diff = auto
         status = auto
