@@ -5,7 +5,7 @@ require 'rubygems'
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
-IRB.conf[:PROMPT_MODE] = :RVM if IRC.conf[:PROMPT][:RVM]
+IRB.conf[:PROMPT_MODE] = :RVM if IRB.conf[:PROMPT][:RVM]
 
 IRB.conf[:AUTO_INDENT] = true
 
