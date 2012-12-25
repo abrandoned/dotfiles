@@ -60,6 +60,7 @@ hi Function           guifg=#FFFFFF ctermfg=15                              gui=
 hi Define             guifg=#FF9900 ctermfg=208                             gui=none
 hi LineNr             guifg=#FFFFFF ctermfg=15                              gui=none
 hi CursorLine         guibg=#000000 ctermbg=0                               gui=none
+hi Directory          guibg=#FFFFFF ctermfg=42                              gui=none
 
 " Vim Stuff
 hi vimGroup           guifg=#FFFFFF ctermfg=15                    gui=none
