@@ -85,3 +85,8 @@ function! s:SetupSnippets()
     endif
   endif
 endfunction
+
+" Add all the tags files in the gemset to the ctags searching
+autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
+      \ pathogen#split(&tags) +
+      \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
