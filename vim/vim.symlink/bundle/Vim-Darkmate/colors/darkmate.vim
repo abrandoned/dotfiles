@@ -41,7 +41,7 @@ set cursorline
 set guifont=Monaco:h12
 
 " Main Colors
-hi Normal             guibg=#232323 ctermbg=235   guifg=#FFFFFF ctermfg=15  gui=none
+hi Normal             guibg=#232323 ctermbg=black guifg=#FFFFFF ctermfg=15  gui=none
 hi Visual		          guifg=#FFFFFF ctermfg=15    guibg=#555753 ctermbg=240 gui=none 
 hi String             guifg=#96ff00 ctermfg=118                             gui=none
 hi Delimiter          guifg=#96ff00 ctermfg=118                             gui=none
