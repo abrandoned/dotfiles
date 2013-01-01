@@ -61,8 +61,9 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " Setup mappings for CtrlP
 let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_show_hidden = 1 " Want to see dotfiles
 " Setup ignore patterns for CtrlP
-set wildignore+=*.o,*.obj,.git,doc/**,*.sql,*.log
+set wildignore+=*.o,*.obj,*/.git/*,doc/**,*.sql,*.log
 
 " Add NERDTree open by default and move to edit window
 autocmd VimEnter * NERDTree
