@@ -51,7 +51,13 @@ autocmd VimLeave * if filereadable($HOME."/.vim/.netrwhist") | call delete($HOME
 " let g:SuperTabDefaultCompletionType = "context"
 
 " For Ack.vim
-let g:ackprg="ack-grep -H --nocolor --nogroup --nosql --column --ignore-dir=doc"
+if executable('ack-grep')
+  let g:ackprg="ack-grep -H --nocolor --nogroup --nosql --column --ignore-dir=doc"
+endif
+
+if executable('ack')
+  let g:ackprg="ack -H --nocolor --nogroup --nosql --column --ignore-dir=doc"
+endif
 
 " Default colorscheme 
 colorscheme darkmate
