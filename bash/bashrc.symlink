@@ -69,6 +69,15 @@ xterm*|rxvt*)
     ;;
 esac
 
+if [ -x /usr/local/opt/coreutils/libexec/gnubin ]; then
+  PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+  MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+  test -e ~/.dircolors && eval `dircolors -b ~/.dircolors`
+  alias ls="ls --color=always" 
+  alias grep="grep --color=always"
+  alias egrep="egrep --color=always"
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
