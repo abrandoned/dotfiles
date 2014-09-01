@@ -50,13 +50,19 @@ autocmd VimLeave * if filereadable($HOME."/.vim/.netrwhist") | call delete($HOME
 " SuperTab Config stuff
 " let g:SuperTabDefaultCompletionType = "context"
 
-" For Ack.vim
-let g:ackprg="ack-grep -H --nocolor --nogroup --nosql --column --ignore-dir=doc --ignore-dir=vendor"
-
 " Rabl highlighting
 autocmd BufRead,BufNewFile *.rabl setf ruby
 autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
 autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
+
+" For Ack-grep
+if executable('ack-grep')
+  let g:ackprg="ack-grep -H --nocolor --nogroup --nosql --column --ignore-dir=doc"
+endif
+
+if executable('ack')
+  let g:ackprg="ack -H --nocolor --nogroup --nosql --column --ignore-dir=doc"
+endif
 
 " Default colorscheme 
 colorscheme darkmate
