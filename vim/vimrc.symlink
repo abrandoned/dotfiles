@@ -51,7 +51,12 @@ autocmd VimLeave * if filereadable($HOME."/.vim/.netrwhist") | call delete($HOME
 " let g:SuperTabDefaultCompletionType = "context"
 
 " For Ack.vim
-let g:ackprg="ack-grep -H --nocolor --nogroup --nosql --column --ignore-dir=doc"
+let g:ackprg="ack-grep -H --nocolor --nogroup --nosql --column --ignore-dir=doc --ignore-dir=vendor"
+
+" Rabl highlighting
+autocmd BufRead,BufNewFile *.rabl setf ruby
+autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
+autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
 
 " Default colorscheme 
 colorscheme darkmate
@@ -86,6 +91,9 @@ function! s:SetupSnippets()
     endif
   endif
 endfunction
+
+" Setup xmllint for xml formatting
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 " Add all the tags files in the gemset to the ctags searching
 autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
