@@ -50,6 +50,9 @@ autocmd VimLeave * if filereadable($HOME."/.vim/.netrwhist") | call delete($HOME
 " SuperTab Config stuff
 " let g:SuperTabDefaultCompletionType = "context"
 
+" .ru highlighting
+autocmd BufRead,BufNewFile *.ru setf ruby
+
 " Rabl highlighting
 autocmd BufRead,BufNewFile *.rabl setf ruby
 autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
