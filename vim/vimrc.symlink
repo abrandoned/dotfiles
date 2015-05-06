@@ -47,6 +47,11 @@ autocmd BufNewFile,BufRead *.mobile.erb let b:eruby_subtype = 'html'
 " Remove history file if created
 autocmd VimLeave * if filereadable($HOME."/.vim/.netrwhist") | call delete($HOME."/.vim/.netrwhist") | endif
 
+" Clang-Format alias
+let g:clang_format#command = "clang-format-3.5"
+let g:clang_format#code_style = "llvm"
+let g:clang_format#style_options = { "AlwaysBreakTemplateDeclarations" : "true" }
+
 " SuperTab Config stuff
 " let g:SuperTabDefaultCompletionType = "context"
 
