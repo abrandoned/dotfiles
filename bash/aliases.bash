@@ -8,6 +8,9 @@ alias be="b exec"
 alias bx="b exec"
 alias bs="b show"
 
+# Clang-Format
+alias clang-format="clang-format-3.5"
+
 # Setup env variables
 export EDITOR="vim"
 

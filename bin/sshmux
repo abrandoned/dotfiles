@@ -10,7 +10,6 @@
 #  sshmux app{1..2}.example.com"
 #  sshmux app.{site1,site2}.com"
 
-
 _sshmux () {
   local hosts=($*)
   local ssh="ssh -o StrictHostKeyChecking=no -o ConnectTimeout=1"
