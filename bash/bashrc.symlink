@@ -108,6 +108,12 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+### GO ###
+PATH=$PATH:/usr/local/go/bin
+[ -d $HOME/go ] || mkdir -p $HOME/go
+GOPATH=$HOME/go
+PATH=$PATH:$HOME/go/bin
+
 #####################################################
 ##################### DOTFILES ######################
 #####################################################

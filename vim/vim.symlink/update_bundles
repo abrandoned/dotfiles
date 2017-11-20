@@ -23,7 +23,8 @@ git_bundles = [
   "git://github.com/ervandew/supertab.git",
   "git://github.com/danchoi/ruby_bashrockets.vim.git",
   "git://github.com/bdewitt/vim-prettyxml.git",
-  "git@github.com:rhysd/vim-clang-format.git"
+  "git@github.com:rhysd/vim-clang-format.git",
+  "git://github.com/fatih/vim-go.git",
 ]
 
 vim_org_scripts = [
