@@ -6,3 +6,5 @@ if test -f $completion
 then
   source $completion
 fi
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
