@@ -25,6 +25,8 @@ git_bundles = [
   "git://github.com/bdewitt/vim-prettyxml.git",
   "git@github.com:rhysd/vim-clang-format.git",
   "git://github.com/fatih/vim-go.git",
+  "git@github.com:ollykel/v-vim.git",
+  "git@github.com:zakuro9715/vim-vtools.git"
 ]
 
 vim_org_scripts = [

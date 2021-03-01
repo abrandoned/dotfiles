@@ -106,6 +106,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# For Mac computes and brews
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### GO ###
@@ -138,3 +141,4 @@ fi
 for config_file in `find $DOTFILES_HOME -name 'completion.bash'`; do
   source $config_file
 done
+source ~/.git-prompt.sh

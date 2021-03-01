@@ -114,6 +114,10 @@ autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
       \ pathogen#split(&tags) +
       \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
 
+" V formatting automatically on save => off
+let g:vfmt = 0
+autocmd Filetype vlang setlocal ts=4 sw=4 expandtab
+
 " Add Golang stuff
 let g:go_disable_autoinstall = 0
 
