@@ -114,6 +114,12 @@ PATH=$PATH:/usr/local/go/bin
 GOPATH=$HOME/go
 PATH=$PATH:$HOME/go/bin
 
+### Postgres.app config on Mac ####
+if [ -d "/Applications/Postgres.app/Contents/Versions/latest" ]
+then
+  PATH=$PATH:"/Applications/Postgres.app/Contents/Versions/latest/bin"
+fi
+
 #####################################################
 ##################### DOTFILES ######################
 #####################################################
