@@ -47,36 +47,42 @@ BG_WHITE=47
 
 BG_NULL=00
 
-##
-# ANSI Escape Commands
-##
-ESC="\033"
-NORMAL="\[$ESC[m\]"
-RESET="\[$ESC[${DULL};${FG_WHITE};${BG_NULL}m\]"
+if [ -n "$ZSH_VERSION" ]; then
+  source ~/.dotfiles/bash//zsh-async-git-prompt.zsh
+  PROMPT='%F{027}%T%f | %F{127}%n%f | %~ $ '
+else
+  ##
+  # We should be in bash
+  # ANSI Escape Commands
+  ##
+  ESC="\033"
+  NORMAL="\[$ESC[m\]"
+  RESET="\[$ESC[${DULL};${FG_WHITE};${BG_NULL}m\]"
 
-##
-# Shortcuts for Colored Text ( Bright and FG Only )
-##
+  ##
+  # Shortcuts for Colored Text ( Bright and FG Only )
+  ##
 
-# DULL TEXT
+  # DULL TEXT
 
-BLACK="\[$ESC[${DULL};${FG_BLACK}m\]"
-RED="\[$ESC[${DULL};${FG_RED}m\]"
-GREEN="\[$ESC[${DULL};${FG_GREEN}m\]"
-YELLOW="\[$ESC[${DULL};${FG_YELLOW}m\]"
-BLUE="\[$ESC[${DULL};${FG_BLUE}m\]"
-VIOLET="\[$ESC[${DULL};${FG_VIOLET}m\]"
-CYAN="\[$ESC[${DULL};${FG_CYAN}m\]"
-WHITE="\[$ESC[${DULL};${FG_WHITE}m\]"
+  BLACK="\[$ESC[${DULL};${FG_BLACK}m\]"
+  RED="\[$ESC[${DULL};${FG_RED}m\]"
+  GREEN="\[$ESC[${DULL};${FG_GREEN}m\]"
+  YELLOW="\[$ESC[${DULL};${FG_YELLOW}m\]"
+  BLUE="\[$ESC[${DULL};${FG_BLUE}m\]"
+  VIOLET="\[$ESC[${DULL};${FG_VIOLET}m\]"
+  CYAN="\[$ESC[${DULL};${FG_CYAN}m\]"
+  WHITE="\[$ESC[${DULL};${FG_WHITE}m\]"
 
-# BRIGHT TEXT
-BRIGHT_BLACK="\[$ESC[${BRIGHT};${FG_BLACK}m\]"
-BRIGHT_RED="\[$ESC[${BRIGHT};${FG_RED}m\]"
-BRIGHT_GREEN="\[$ESC[${BRIGHT};${FG_GREEN}m\]"
-BRIGHT_YELLOW="\[$ESC[${BRIGHT};${FG_YELLOW}m\]"
-BRIGHT_BLUE="\[$ESC[${BRIGHT};${FG_BLUE}m\]"
-BRIGHT_VIOLET="\[$ESC[${BRIGHT};${FG_VIOLET}m\]"
-BRIGHT_CYAN="\[$ESC[${BRIGHT};${FG_CYAN}m\]"
-BRIGHT_WHITE="\[$ESC[${BRIGHT};${FG_WHITE}m\]"
+  # BRIGHT TEXT
+  BRIGHT_BLACK="\[$ESC[${BRIGHT};${FG_BLACK}m\]"
+  BRIGHT_RED="\[$ESC[${BRIGHT};${FG_RED}m\]"
+  BRIGHT_GREEN="\[$ESC[${BRIGHT};${FG_GREEN}m\]"
+  BRIGHT_YELLOW="\[$ESC[${BRIGHT};${FG_YELLOW}m\]"
+  BRIGHT_BLUE="\[$ESC[${BRIGHT};${FG_BLUE}m\]"
+  BRIGHT_VIOLET="\[$ESC[${BRIGHT};${FG_VIOLET}m\]"
+  BRIGHT_CYAN="\[$ESC[${BRIGHT};${FG_CYAN}m\]"
+  BRIGHT_WHITE="\[$ESC[${BRIGHT};${FG_WHITE}m\]"
 
-PS1="$BRIGHT_BLUE DEV - $BRIGHT_RED\$(date +%H:%M) \w$BRIGHT_GREEN \$(parse_git_branch) $BRIGHT_WHITE\$ "
+  PS1="$BRIGHT_BLUE DEV - $BRIGHT_RED\$(date +%H:%M) \w$BRIGHT_GREEN \$(parse_git_branch) $BRIGHT_WHITE\$ "
+fi
