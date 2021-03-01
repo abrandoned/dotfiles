@@ -147,4 +147,7 @@ fi
 for config_file in `find $DOTFILES_HOME -name 'completion.bash'`; do
   source $config_file
 done
-source ~/.git-prompt.sh
+
+if [ -f ~/.git-prompt.sh ]; then
+  source ~/.git-prompt.sh
+fi
